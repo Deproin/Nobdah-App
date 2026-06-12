@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: nobdah-backend
+    env: docker
+    dockerContext: ./backend
+    dockerfile: Dockerfile
+    plan: free # Can be changed to 'starter' if more power is needed
+    region: frankfurt # Or your preferred region
+    envVars:
+      - key: PORT
+        value: 10000
